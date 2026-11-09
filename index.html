@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M. Ridwan Habibi | Personal Portfolio</title>
+  <meta name="description"
+    content="Portofolio M. Ridwan Habibi, siswa Rekayasa Perangkat Lunak dan calon peserta Praktik Kerja Lapangan. Menampilkan proyek pengembangan web, keahlian, pendidikan, dan kontak.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#06131a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="M. Ridwan Habibi | Personal Portfolio">
+  <meta property="og:description"
+    content="Siswa Rekayasa Perangkat Lunak yang tertarik pada web development, database, dan teknologi AI.">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2306131a'/%3E%3Ctext x='16' y='23' font-family='sans-serif' font-size='19' text-anchor='middle' fill='%2338bdf8'%3EH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap">
+  <style>
+    :root {
+      --bg: #06131a;
+      --surface: #0f2632;
+      --line: #1e3a4b;
+      --soft: #152d3d;
+      --text: #e2e8f0;
+      --text2: #94a3b8;
+      --text3: #64748b;
+      --accent: #38bdf8;
+      --accent-hi: #7dd3fc;
+      --ink: #030712;
+      --serif: 'Syne', 'Plus Jakarta Sans', sans-serif;
+      --sans: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --gut: clamp(1.25rem, 4vw, 2.5rem);
+      --hh: 4rem;
+      color-scheme: dark
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--hh) + 1rem);
+      -webkit-text-size-adjust: 100%;
+      scrollbar-color: #1e3a4b var(--bg)
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 400 1.0625rem/1.65 var(--sans);
+      -webkit-font-smoothing: antialiased
+    }
+
+    ::selection {
+      background: rgba(56, 189, 248, .3)
+    }
+
+    a {
+      color: inherit
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    ul,
+    dl,
+    dd {
+      margin: 0
+    }
+
+    ul {
+      padding: 0;
+      list-style: none
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px
+    }
+
+    .wrap {
+      max-width: 70rem;
+      margin-inline: auto;
+      padding-inline: var(--gut)
+    }
+
+    .skip {
+      position: absolute;
+      left: var(--gut);
+      top: -4rem;
+      z-index: 30;
+      padding: .5rem 1rem;
+      border-radius: 6px;
+      background: var(--accent);
+      color: var(--ink);
+      text-decoration: none
+    }
+
+    .skip:focus {
+      top: .75rem
+    }
+
+    .top {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--bg);
+      border-bottom: 1px solid transparent;
+      transition: border-color .3s
+    }
+
+    .top.scrolled {
+      border-color: var(--soft)
+    }
+
+    .bar {
+      height: var(--hh);
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: .75rem;
+      text-decoration: none
+    }
+
+    .mark {
+      font: 700 1.375rem/1 var(--serif);
+      letter-spacing: .05em
+    }
+
+    .who {
+      font-size: .9375rem;
+      color: var(--text3)
+    }
+
+    .nav {
+      display: flex;
+      gap: clamp(1.1rem, 3vw, 2rem)
+    }
+
+    .nav a {
+      position: relative;
+      padding-block: .5rem;
+      font-size: .9375rem;
+      color: var(--text2);
+      text-decoration: none;
+      transition: color .2s
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 .1rem;
+      height: 1px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .25s
+    }
+
+    .nav a:hover,
+    .nav a[aria-current] {
+      color: var(--text)
+    }
+
+    .nav a:hover::after,
+    .nav a[aria-current]::after {
+      transform: scaleX(1)
+    }
+
+    @media(max-width:34rem) {
+      .who {
+        display: none
+      }
+    }
+
+    .hero {
+      padding-block: clamp(3.5rem, 9vw, 7rem) clamp(2.5rem, 5vw, 4rem)
+    }
+
+    .hero h1 {
+      font: 700 clamp(2.5rem, 1.4rem + 4.6vw, 4.5rem)/1.05 var(--serif);
+      letter-spacing: -.02em;
+      text-wrap: balance
+    }
+
+    .role {
+      margin-top: 1.25rem;
+      font-size: 1.1875rem;
+      line-height: 1.5
+    }
+
+    .intro {
+      margin-top: 1rem;
+      max-width: 35rem;
+      color: var(--text2)
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem 1.75rem;
+      margin-top: 2rem
+    }
+
+    .btn {
+      display: inline-block;
+      padding: .75rem 1.25rem;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      background: var(--accent);
+      color: var(--ink);
+      font: 600 .9688rem/1.2 var(--sans);
+      text-decoration: none;
+      cursor: pointer;
+      transition: background .2s, border-color .2s
+    }
+
+    .btn:hover {
+      background: var(--accent-hi);
+      border-color: var(--accent-hi)
+    }
+
+    .btn-2 {
+      background: transparent;
+      border-color: var(--line);
+      color: var(--text)
+    }
+
+    .btn-2:hover {
+      background: var(--surface);
+      border-color: var(--accent)
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: .55rem;
+      font-size: .9375rem;
+      color: var(--text2)
+    }
+
+    .status::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent)
+    }
+
+    .index {
+      margin-top: clamp(2.5rem, 6vw, 4.5rem);
+      border-top: 1px solid var(--line)
+    }
+
+    .index a {
+      display: grid;
+      grid-template-columns: 10rem 1fr auto;
+      gap: .25rem 1.5rem;
+      align-items: baseline;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--soft);
+      text-decoration: none
+    }
+
+    .index b {
+      font: 600 1.375rem/1.2 var(--serif);
+      transition: color .2s
+    }
+
+    .index span {
+      font-size: .9375rem;
+      color: var(--text2)
+    }
+
+    .index time {
+      font-size: .875rem;
+      color: var(--text3);
+      font-variant-numeric: tabular-nums
+    }
+
+    .index a:hover b {
+      color: var(--accent-hi)
+    }
+
+    @media(max-width:40rem) {
+      .index a {
+        grid-template-columns: 1fr auto
+      }
+
+      .index span {
+        grid-column: 1/-1;
+        order: 3
+      }
+    }
+
+    .section {
+      padding-block: clamp(3.5rem, 8vw, 6rem)
+    }
+
+    .head {
+      max-width: 40rem;
+      margin-bottom: clamp(1.75rem, 4vw, 3rem)
+    }
+
+    h2 {
+      font: 700 clamp(1.875rem, 1.4rem + 1.8vw, 2.625rem)/1.15 var(--serif);
+      letter-spacing: -.01em
+    }
+
+    .lead {
+      margin-top: .75rem;
+      color: var(--text2)
+    }
+
+    .project {
+      display: grid;
+      grid-template-areas: "head" "media" "body";
+      gap: 1.25rem;
+      padding-block: clamp(2.25rem, 5vw, 3.5rem);
+      border-top: 1px solid var(--line)
+    }
+
+    .p-head {
+      grid-area: head
+    }
+
+    .p-media {
+      grid-area: media;
+      min-width: 0
+    }
+
+    .p-body {
+      grid-area: body
+    }
+
+    @media(min-width:62rem) {
+      .project {
+        grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+        grid-template-areas: "head media" "body media";
+        grid-template-rows: auto 1fr;
+        column-gap: 3.5rem
+      }
+    }
+
+    .project h3 {
+      font: 700 clamp(1.75rem, 1.35rem + 1.3vw, 2.25rem)/1.15 var(--serif)
+    }
+
+    .kind {
+      margin-top: .4rem;
+      font-size: .9375rem;
+      color: var(--accent)
+    }
+
+    .p-body p {
+      color: var(--text2)
+    }
+
+    .points {
+      margin-block: 1.25rem
+    }
+
+    .points li {
+      position: relative;
+      padding: .6rem 0 .6rem 1.15rem;
+      border-top: 1px solid var(--soft);
+      font-size: .9688rem;
+      line-height: 1.5;
+      color: var(--text2)
+    }
+
+    .points li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1.3em;
+      width: 6px;
+      height: 1px;
+      background: var(--text3)
+    }
+
+    .p-body .meta {
+      font-size: .9375rem
+    }
+
+    .note-v {
+      margin-top: .75rem;
+      font-size: .875rem;
+      color: var(--text3)
+    }
+
+    .note-v a {
+      text-decoration-color: var(--line);
+      text-underline-offset: .25em
+    }
+
+    .note-v a:hover {
+      color: var(--accent-hi);
+      text-decoration-color: var(--accent)
+    }
+
+    .player {
+      position: relative;
+      aspect-ratio: 1920/988;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface)
+    }
+
+    .player.hd {
+      aspect-ratio: 16/9
+    }
+
+    .player video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: var(--surface)
+    }
+
+    .player video:fullscreen {
+      object-fit: contain;
+      background: #000
+    }
+
+    .player video:-webkit-full-screen {
+      object-fit: contain;
+      background: #000
+    }
+
+    .play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+      padding: 1.1rem;
+      border: 0;
+      background: linear-gradient(to top, rgba(6, 19, 26, .88), rgba(6, 19, 26, 0) 48%);
+      color: var(--text);
+      font: 500 .9688rem/1 var(--sans);
+      text-align: left;
+      cursor: pointer
+    }
+
+    .play[hidden] {
+      display: none
+    }
+
+    .play-in {
+      display: flex;
+      align-items: center;
+      gap: .8rem
+    }
+
+    .play small {
+      font-size: .875rem;
+      font-weight: 400;
+      color: var(--text2)
+    }
+
+    .disc {
+      display: grid;
+      place-items: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border: 1px solid rgba(226, 232, 240, .4);
+      border-radius: 50%;
+      background: rgba(6, 19, 26, .6);
+      transition: background .25s, border-color .25s, color .25s
+    }
+
+    .disc svg {
+      width: 14px;
+      height: 14px;
+      margin-left: 2px;
+      fill: currentColor
+    }
+
+    .play:hover .disc,
+    .play:focus-visible .disc {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--ink)
+    }
+
+    .split {
+      display: grid;
+      gap: 2.5rem 4rem
+    }
+
+    @media(min-width:60rem) {
+      .split {
+        grid-template-columns: minmax(0, 5fr) minmax(0, 6fr)
+      }
+    }
+
+    .text p {
+      max-width: 34rem;
+      color: var(--text2)
+    }
+
+    .text p+p {
+      margin-top: 1rem
+    }
+
+    .skills div {
+      display: grid;
+      grid-template-columns: 9rem 1fr;
+      gap: 1rem;
+      padding: .9rem 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .skills div:last-child,
+    .ways li:last-child {
+      border-bottom: 1px solid var(--line)
+    }
+
+    .skills dt,
+    .ways span {
+      font-size: .9375rem;
+      color: var(--text3)
+    }
+
+    .ways li {
+      display: grid;
+      grid-template-columns: 7rem 1fr;
+      gap: 1rem;
+      align-items: baseline;
+      padding: 1rem 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .ways a {
+      font-size: 1.125rem;
+      overflow-wrap: anywhere;
+      text-decoration-color: var(--line);
+      text-underline-offset: .3em;
+      transition: color .2s, text-decoration-color .2s
+    }
+
+    .ways a:hover {
+      color: var(--accent-hi);
+      text-decoration-color: var(--accent)
+    }
+
+    .form h3 {
+      margin-bottom: 1.25rem;
+      font: 700 1.5rem/1.2 var(--serif)
+    }
+
+    .field+.field {
+      margin-top: 1rem
+    }
+
+    label {
+      display: block;
+      margin-bottom: .4rem;
+      font-size: .9375rem;
+      color: var(--text2)
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: .75rem .9rem;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--text);
+      font: inherit;
+      font-size: 1rem;
+      transition: border-color .2s
+    }
+
+    textarea {
+      min-height: 8.5rem;
+      resize: vertical
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: var(--text3)
+    }
+
+    input:hover,
+    textarea:hover {
+      border-color: #2a5067
+    }
+
+    input:focus-visible,
+    textarea:focus-visible {
+      border-color: var(--accent);
+      outline-offset: 0
+    }
+
+    .send {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-top: 1.25rem
+    }
+
+    .note {
+      margin-top: 1rem;
+      max-width: 30rem;
+      font-size: .875rem;
+      line-height: 1.55;
+      color: var(--text3)
+    }
+
+    .foot {
+      padding-block: 2rem;
+      border-top: 1px solid var(--soft)
+    }
+
+    .foot .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: .75rem 2rem;
+      font-size: .875rem;
+      color: var(--text3)
+    }
+
+    .foot a {
+      text-decoration: none
+    }
+
+    .foot a:hover {
+      color: var(--text)
+    }
+
+    @media(prefers-reduced-motion:no-preference) {
+      .rise {
+        opacity: 0;
+        transform: translateY(10px);
+        animation: rise .8s cubic-bezier(.2, .7, .2, 1) forwards;
+        animation-delay: calc(var(--i, 0)*100ms + 100ms)
+      }
+
+      @keyframes rise {
+        to {
+          opacity: 1;
+          transform: none
+        }
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+  <a class="skip" href="#proyek">Lewati ke proyek</a>
+
+  <header class="top">
+    <div class="wrap bar">
+      <a class="brand" href="#top" aria-label="M. Ridwan Habibi, kembali ke atas"><span class="mark">HABIBI</span><span
+          class="who">Personal Portfolio</span></a>
+      <nav class="nav" aria-label="Utama"><a href="#tentang">Tentang</a><a href="#keahlian">Keahlian</a><a
+          href="#proyek">Proyek</a><a href="#pendidikan">Pendidikan</a><a href="#kontak">Kontak</a></nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1 class="rise" style="--i:0">M. Ridwan Habibi</h1>
+        <p class="role rise" style="--i:1">Junior Web Developer · Siswa Rekayasa Perangkat Lunak</p>
+        <p class="intro rise" style="--i:2">Saya adalah siswa Rekayasa Perangkat Lunak yang tertarik pada pengembangan
+          web, pemrograman, database, dan teknologi AI. Saya senang membangun proyek secara mandiri, mempelajari
+          teknologi baru, dan ingin mengembangkan kemampuan melalui pengalaman kerja nyata.</p>
+        <div class="actions rise" style="--i:3">
+          <a class="btn" href="#proyek">Lihat proyek</a>
+          <a class="btn btn-2" href="#kontak">Hubungi saya</a>
+          <span class="status">Terbuka untuk kesempatan PKL</span>
+        </div>
+        <ul class="index rise" style="--i:4">
+          <li><a href="#localku"><b>LocalKu</b><span>Direktori usaha lokal</span><time
+                datetime="PT3M23S">3:23</time></a></li>
+          <li><a href="#stoku"><b>StoKu</b><span>Kasir dan stok warung</span><time datetime="PT2M20S">2:20</time></a>
+          </li>
+          <li><a href="#aiku"><b>AIKu</b><span>Asisten AI untuk chat dan data</span><time
+                datetime="PT2M23S">2:23</time></a></li>
+          <li><a href="#tokodo"><b>TokoDo</b><span>Kasir dengan peran kasir dan admin</span><time
+                datetime="PT3M4S">3:04</time></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="proyek" aria-labelledby="h-karya">
+      <div class="wrap">
+        <div class="head">
+          <h2 id="h-karya">Proyek Pilihan</h2>
+          <p class="lead">Beberapa proyek mandiri yang saya buat untuk melatih kemampuan pemrograman, memahami kebutuhan
+            pengguna, dan menerapkan teknologi yang dipelajari.</p>
+        </div>
+
+        <article class="project" id="localku">
+          <div class="p-head">
+            <h3>LocalKu</h3>
+            <p class="kind">Direktori usaha lokal dengan panel admin</p>
+          </div>
+          <div class="p-media">
+            <div class="player">
+              <video controls preload="none" playsinline poster="assets/poster1.jpg" aria-label="Demo LocalKu">
+                <source src="assets/video1.mp4" type="video/mp4">Browser Anda tidak mendukung pemutar video.
+              </video>
+              <button class="play" type="button" aria-label="Putar demo LocalKu"><span class="play-in"><span
+                    class="disc"><svg viewBox="0 0 14 14" aria-hidden="true">
+                      <path d="M1 0l12 7-12 7z" />
+                    </svg></span>Putar demo <small>3:23</small></span></button>
+            </div>
+            <p class="note-v">Rekaman layar, 3 menit 23 detik. <a href="https://youtu.be/g4k4neLyf4A" target="_blank"
+                rel="noopener noreferrer">Tonton di YouTube</a></p>
+          </div>
+          <div class="p-body">
+            <p>Pengunjung mencari usaha di sekitar mereka berdasarkan kategori, membuka halaman detailnya, dan menulis
+              ulasan berbintang. Admin mengelola seluruh isinya dari panel tersendiri.</p>
+            <ul class="points">
+              <li>Jelajah per kategori dan daftar bisnis unggulan</li>
+              <li>Halaman detail bisnis dengan rating dan form ulasan</li>
+              <li>Dasbor admin dengan statistik, grafik listing per kategori, dan kota teratas</li>
+              <li>Kelola listing, kategori, ulasan, pengguna, dan pesan masuk</li>
+            </ul>
+            <p class="meta">Teknologi: full-stack web, database, login admin</p>
+          </div>
+        </article>
+
+        <article class="project" id="stoku">
+          <div class="p-head">
+            <h3>StoKu</h3>
+            <p class="kind">Kasir dan stok warung</p>
+          </div>
+          <div class="p-media">
+            <div class="player">
+              <video controls preload="none" playsinline poster="assets/poster2.jpg" aria-label="Demo StoKu">
+                <source src="assets/video2.mp4" type="video/mp4">Browser Anda tidak mendukung pemutar video.
+              </video>
+              <button class="play" type="button" aria-label="Putar demo StoKu"><span class="play-in"><span
+                    class="disc"><svg viewBox="0 0 14 14" aria-hidden="true">
+                      <path d="M1 0l12 7-12 7z" />
+                    </svg></span>Putar demo <small>2:20</small></span></button>
+            </div>
+            <p class="note-v">Rekaman layar, 2 menit 20 detik. <a href="https://youtu.be/aWNbWUbYXG8" target="_blank"
+                rel="noopener noreferrer">Tonton di YouTube</a></p>
+          </div>
+          <div class="p-body">
+            <p>Dasbor kasir untuk warung: mencatat transaksi, memantau stok barang, dan membuat laporan penjualan
+              otomatis.</p>
+            <ul class="points">
+              <li>Kasir dengan pencarian nama atau SKU dan filter kategori</li>
+              <li>Dasbor penjualan harian dengan tren 14 hari</li>
+              <li>Laporan omzet dan laba, bisa diekspor ke CSV</li>
+              <li>Pengaturan toko dengan pratinjau struk</li>
+            </ul>
+            <p class="meta">Teknologi: full-stack web, database, dasbor interaktif</p>
+          </div>
+        </article>
+
+        <article class="project" id="aiku">
+          <div class="p-head">
+            <h3>AIKu</h3>
+            <p class="kind">Asisten AI untuk chat, data, dan berkas</p>
+          </div>
+          <div class="p-media">
+            <div class="player">
+              <video controls preload="none" playsinline poster="assets/poster3.jpg" aria-label="Demo AIKu">
+                <source src="assets/video3.mp4" type="video/mp4">Browser Anda tidak mendukung pemutar video.
+              </video>
+              <button class="play" type="button" aria-label="Putar demo AIKu"><span class="play-in"><span
+                    class="disc"><svg viewBox="0 0 14 14" aria-hidden="true">
+                      <path d="M1 0l12 7-12 7z" />
+                    </svg></span>Putar demo <small>2:23</small></span></button>
+            </div>
+            <p class="note-v">Rekaman layar, 2 menit 23 detik. <a href="https://youtu.be/gYjr5P65QHc" target="_blank"
+                rel="noopener noreferrer">Tonton di YouTube</a></p>
+          </div>
+          <div class="p-body">
+            <p>Asisten AI berbasis API yang bisa diajak mengobrol dan ditanyai soal data. Di Terminal Data, pertanyaan
+              berbahasa Indonesia diubah menjadi query SQL ke database sampel, lalu hasilnya dijelaskan kembali.</p>
+            <ul class="points">
+              <li>Chat biasa dan mode agen</li>
+              <li>Terminal Data yang hanya membaca database sampel</li>
+              <li>Unggah berkas untuk diproses</li>
+              <li>Menu gambar, video, dan kode, serta dasbor pemakaian dan kuota</li>
+            </ul>
+            <p class="meta">Teknologi: Python / Node.js, Gemini API, query kustom</p>
+          </div>
+        </article>
+
+        <article class="project" id="tokodo">
+          <div class="p-head">
+            <h3>TokoDo</h3>
+            <p class="kind">Kasir dengan peran kasir dan admin</p>
+          </div>
+          <div class="p-media">
+            <div class="player hd">
+              <video controls preload="none" playsinline poster="assets/poster4.jpg" aria-label="Demo TokoDo">
+                <source src="assets/video4.mp4" type="video/mp4">Browser Anda tidak mendukung pemutar video.
+              </video>
+              <button class="play" type="button" aria-label="Putar demo TokoDo"><span class="play-in"><span
+                    class="disc"><svg viewBox="0 0 14 14" aria-hidden="true">
+                      <path d="M1 0l12 7-12 7z" />
+                    </svg></span>Putar demo <small>3:04</small></span></button>
+            </div>
+            <p class="note-v">Rekaman layar, 3 menit 4 detik. <a href="https://youtu.be/WtJ7MwwgfBs" target="_blank"
+                rel="noopener noreferrer">Tonton di YouTube</a></p>
+          </div>
+          <div class="p-body">
+            <p>Aplikasi kasir yang dipisah menurut peran. Kasir fokus melayani pembayaran tunai dan QRIS, sedangkan
+              admin mengurus produk, pegawai, dan transaksi.</p>
+            <ul class="points">
+              <li>Login dengan hak akses kasir atau admin</li>
+              <li>Kasir: keranjang, uang diterima, kembalian, dan cetak struk</li>
+              <li>Ringkasan admin: omzet hari ini dan 7 hari, produk terlaris, stok menipis</li>
+              <li>Kelola produk, akun pegawai, pembatalan transaksi, dan jejak audit</li>
+            </ul>
+            <p class="meta">Teknologi: full-stack web (PHP), pembayaran tunai dan QRIS</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="tentang" aria-labelledby="h-tentang">
+      <div class="wrap">
+        <div class="head">
+          <h2 id="h-tentang">Tentang Saya</h2>
+          <p class="lead">Profil singkat, minat, dan arah pengembangan kemampuan.</p>
+        </div>
+        <div class="split">
+          <div class="text">
+            <p>Saya merupakan siswa SMK Taruna Bangsa Bekasi Utara, jurusan Rekayasa Perangkat Lunak (RPL). Saya
+              memiliki ketertarikan pada pengembangan aplikasi web, pemrograman, pengelolaan database, dan teknologi
+              kecerdasan buatan.</p>
+            <p>Saya terbiasa belajar secara mandiri melalui eksplorasi teknologi dan pembuatan proyek. Saya ingin
+              memperoleh pengalaman kerja nyata, memahami alur kerja pengembangan perangkat lunak di industri, serta
+              meningkatkan kemampuan teknis dan profesional selama Praktik Kerja Lapangan.</p>
+          </div>
+          <dl class="skills" id="keahlian">
+            <div>
+              <dt>Frontend</dt>
+              <dd>HTML, CSS, JavaScript</dd>
+            </div>
+            <div>
+              <dt>Backend & Data</dt>
+              <dd>PHP, Node.js, MySQL, PostgreSQL</dd>
+            </div>
+            <div>
+              <dt>AI Integration</dt>
+              <dd>Python, Gemini API</dd>
+            </div>
+            <div>
+              <dt>Bahasa lain</dt>
+              <dd>Go, C++</dd>
+            </div>
+            <div>
+              <dt>Tools & Desain</dt>
+              <dd>VS Code, Git, Acode, UI/UX dasar</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pendidikan" aria-labelledby="h-pendidikan">
+      <div class="wrap">
+        <div class="head">
+          <h2 id="h-pendidikan">Pendidikan</h2>
+          <p class="lead">Latar belakang pendidikan dan bidang yang sedang saya pelajari.</p>
+        </div>
+        <article class="project">
+          <div class="p-head">
+            <h3>SMK Taruna Bangsa</h3>
+            <p class="kind">Rekayasa Perangkat Lunak (RPL)</p>
+          </div>
+          <div class="p-body">
+            <p>Siswa aktif jurusan Rekayasa Perangkat Lunak, Bekasi Utara. Fokus pembelajaran meliputi dasar
+              pemrograman, pengembangan web, dan pengelolaan basis data.</p>
+            <ul class="points">
+              <li>Belajar membangun struktur dan tampilan halaman web</li>
+              <li>Mengembangkan logika program dan memahami pengolahan data</li>
+              <li>Menerapkan pembelajaran melalui proyek mandiri</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="kontak" aria-labelledby="h-kontak">
+      <div class="wrap">
+        <div class="head">
+          <h2 id="h-kontak">Kontak</h2>
+          <p class="lead">Saya terbuka untuk informasi kesempatan PKL, diskusi proyek, maupun komunikasi profesional.
+          </p>
+        </div>
+        <div class="split">
+          <ul class="ways">
+            <li><span>WhatsApp</span><a href="https://wa.me/6283840110948" target="_blank"
+                rel="noopener noreferrer">083840110948</a></li>
+            <li><span>Telegram</span><a href="https://t.me/D1delta01" target="_blank"
+                rel="noopener noreferrer">@D1delta01</a></li>
+            <li><span>Email</span><a href="mailto:mridwanhabibi487@gmail.com">mridwanhabibi487@gmail.com</a></li>
+          </ul>
+          <form class="form" id="contact-form">
+            <h3>Kirim pesan</h3>
+            <div class="field"><label for="nama">Nama</label><input id="nama" name="nama" type="text"
+                autocomplete="name" required></div>
+            <div class="field"><label for="pesan">Pesan atau informasi kesempatan PKL</label><textarea id="pesan"
+                name="pesan" required></textarea></div>
+            <div class="send">
+              <button class="btn" type="submit" data-channel="wa">Kirim lewat WhatsApp</button>
+              <button class="btn btn-2" type="submit" data-channel="email">Kirim lewat email</button>
+            </div>
+            <p class="note" id="form-note" aria-live="polite">Tombol akan membuka WhatsApp atau aplikasi email dengan
+              pesan yang sudah terisi. Pesan terkirim setelah Anda menekan kirim di aplikasi tersebut.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span>&copy; <span id="yr">2026</span> M. Ridwan Habibi · Personal Portfolio.</span>
+      <a href="#top">Kembali ke atas</a>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+      $('#yr').textContent = new Date().getFullYear();
+
+      const top = $('.top'), onScroll = () => top.classList.toggle('scrolled', scrollY > 8);
+      onScroll(); addEventListener('scroll', onScroll, { passive: true });
+
+      const links = new Map($$('.nav a').map(a => [a.getAttribute('href').slice(1), a]));
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(es => es.forEach(e => {
+          const a = links.get(e.target.id); if (!a) return;
+          if (e.isIntersecting) { links.forEach(l => l.removeAttribute('aria-current')); a.setAttribute('aria-current', 'true') }
+          else a.removeAttribute('aria-current');
+        }), { rootMargin: '-40% 0px -55% 0px' });
+        $$('main section[id]').forEach(s => io.observe(s));
+      }
+
+      const vids = $$('.player video');
+      $$('.player').forEach(p => {
+        const v = $('video', p), b = $('.play', p);
+        v.removeAttribute('controls');
+        b.addEventListener('click', () => { b.hidden = true; v.controls = true; v.play().catch(() => { }) });
+        v.addEventListener('play', () => { vids.forEach(o => o !== v && o.pause()); b.hidden = true; v.controls = true });
+      });
+
+      const form = $('#contact-form'), note = $('#form-note');
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const ch = (e.submitter && e.submitter.dataset.channel) || 'wa';
+        const nama = form.elements.nama.value.trim(), pesan = form.elements.pesan.value.trim();
+        const text = 'Halo, saya ' + nama + '.\n\n' + pesan;
+        if (ch === 'email') {
+          location.href = 'mailto:mridwanhabibi487@gmail.com?subject=' + encodeURIComponent('Pesan portofolio dari ' + nama) + '&body=' + encodeURIComponent(text);
+          note.textContent = 'Aplikasi email dibuka dengan pesan Anda. Tekan kirim di sana untuk mengirimnya.';
+        } else {
+          window.open('https://wa.me/6283840110948?text=' + encodeURIComponent(text), '_blank', 'noopener');
+          note.textContent = 'WhatsApp dibuka di tab baru dengan pesan Anda. Tekan kirim di sana untuk mengirimnya.';
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>
